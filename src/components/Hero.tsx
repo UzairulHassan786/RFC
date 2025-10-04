@@ -4,6 +4,14 @@ import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
+  // Function to scroll smoothly to the #about section
+  const scrollToNextSection = () => {
+    const nextSection = document.querySelector("#about");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
       {/* Background Image with Overlay */}
@@ -53,11 +61,15 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <button
+        onClick={scrollToNextSection}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer z-20"
+        aria-label="Scroll to next section"
+      >
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-white/50 rounded-full animate-glow"></div>
         </div>
-      </div>
+      </button>
     </section>
   );
 };

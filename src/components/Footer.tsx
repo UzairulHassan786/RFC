@@ -12,9 +12,9 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">V</span>
+                <span className="text-white font-bold text-xl">R</span>
               </div>
-              <span className="font-bold text-xl gradient-text">VIGILANT</span>
+              <span className="font-bold text-xl gradient-text">RFC</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Transform your life through cutting-edge fitness programs. Join our vigilant community today.
@@ -50,19 +50,19 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  123 Fitness Street, Gym City, GC 12345
+                  F9 Park, Islamabad
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <a href="tel:+1234567890" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  +1 (234) 567-890
+                  +92 (341) 9487674
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a href="mailto:uzairulhassan005@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  uzairulhassan005@gmail.com
+                  info@rockfitnessclub.com
                 </a>
               </li>
             </ul>
@@ -116,7 +116,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Vigilant Fitness. All rights reserved. Built with passion for your transformation.
+            © {currentYear} Rock Fitness Club. All rights reserved.
           </p>
         </div>
       </div>

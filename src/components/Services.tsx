@@ -4,7 +4,7 @@ const services = [
   {
     icon: Activity,
     title: "Yoga",
-    description: "Find balance and flexibility through ancient practices combined with modern techniques. Perfect for stress relief and body awareness.",
+    description: "Yoga is an ancient practice that unites body, mind, and spirit through postures, breathing, and meditation. It enhances flexibility, balance, and stamina while reducing stress and improving mental clarity. Practiced worldwide, yoga supports overall health, self-awareness, and inner peace, making it a holistic path to wellness and harmony in life.",
   },
   {
     icon: Dumbbell,
@@ -13,13 +13,13 @@ const services = [
   },
   {
     icon: Flame,
-    title: "Karate",
-    description: "Master martial arts discipline, self-defense, and mental focus. Develop confidence through traditional and sport karate.",
+    title: "Taekwondo",
+    description: "Taekwondo is a Korean martial art that combines powerful kicks, strikes, and self-defense techniques. Known for its focus on discipline, fitness, and flexibility, it promotes both physical health and mental strength, making it a worldwide practice for self-improvement, stamina, and confidence.",
   },
   {
     icon: Activity,
     title: "Boxing",
-    description: "Enhance cardiovascular fitness, power, and coordination. Learn proper technique from professional boxing coaches.",
+    description: "Boxing is a dynamic combat sport that builds strength, speed, and endurance through punches, footwork, and strategy. It improves fitness, coordination, and mental focus while teaching discipline and resilience. Beyond competition, boxing is a powerful way to stay healthy, relieve stress, and develop confidence in both body and mind.",
   },
   {
     icon: Heart,
