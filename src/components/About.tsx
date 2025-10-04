@@ -19,7 +19,7 @@ export const About = () => {
             
             {/* Floating Stats */}
             <div className="absolute -bottom-6 -right-6 bg-card p-4 sm:p-6 rounded-xl shadow-xl border border-border">
-              <div className="text-3xl sm:text-4xl font-bold gradient-text">10K+</div>
+              <div className="text-3xl sm:text-4xl font-bold gradient-text">50+</div>
               <div className="text-xs sm:text-sm text-muted-foreground">Active Members</div>
             </div>
           </div>
