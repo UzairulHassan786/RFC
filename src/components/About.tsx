@@ -27,7 +27,7 @@ export const About = () => {
           {/* Content Side */}
           <div className="space-y-6 animate-slide-in-right">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-              <span className="text-sm font-semibold text-primary">About Vigilant Fitness</span>
+              <span className="text-sm font-semibold text-primary">About Us</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
