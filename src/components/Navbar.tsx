@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, Palette } from "lucide-react";
+import { Phone, Mail, Palette, Dumbbell, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dumbbell } from "lucide-react"; // add this import
-
 
 type Theme =
   | "default"
@@ -17,8 +15,8 @@ type Theme =
   | "eclipse";
 
 export const Navbar = () => {
-  // Imperial is now the starting theme
   const [theme, setTheme] = useState<Theme>("imperial");
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     if (theme === "default") {
@@ -30,7 +28,7 @@ export const Navbar = () => {
 
   const cycleTheme = () => {
     const themes: Array<Theme> = [
-      "imperial",   // start with imperial
+      "imperial",
       "sportsman",
       "default",
       "female",
@@ -40,7 +38,6 @@ export const Navbar = () => {
       "aurora",
       "eclipse",
     ];
-
     const currentIndex = themes.indexOf(theme);
     const nextTheme = themes[(currentIndex + 1) % themes.length];
     setTheme(nextTheme);
@@ -82,48 +79,57 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <Link
+            to="/"
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
             <div className="w-8 h-8 sm:w-10 sm:h-10 gradient-primary rounded-lg flex items-center justify-center">
-  <Dumbbell className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
-</div>
+              <Dumbbell className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
+            </div>
             <span className="font-bold text-lg sm:text-xl gradient-text hidden sm:inline">
               RockFitnessClub
             </span>
           </Link>
 
-          {/* Center */}
-          <div className="flex-1 flex items-center justify-center mx-4 sm:mx-8 gap-2 sm:gap-3">
+          {/* Center contact info (hidden on mobile) */}
+          <div className="hidden sm:flex flex-1 items-center justify-center mx-4 sm:mx-8 gap-3">
             <a
               href="tel:+923419487674"
-              className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden sm:inline">+923419487674</span>
+              <Phone className="w-4 h-4" />
+              +923419487674
             </a>
             <div className="h-4 w-px bg-border"></div>
             <a
               href="mailto:uzairulhassan005@gmail.com"
-              className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden sm:inline">uzairulhassan005@gmail.com</span>
+              <Mail className="w-4 h-4" />
+              uzairulhassan005@gmail.com
             </a>
           </div>
 
-          {/* Right */}
-          <div className="flex items-center space-x-2 sm:space-x-6">
-            <div className="hidden md:flex items-center space-x-6">
-              <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
-                Contact
-              </Link>
-              <Link to="/join" className="text-sm font-medium hover:text-primary transition-colors">
-                Join Us
-              </Link>
-            </div>
-
+          {/* Desktop Nav + Theme Switcher */}
+          <div className="hidden md:flex items-center space-x-6">
+            <Link
+              to="/"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              to="/contact"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/join"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Join Us
+            </Link>
             <Button
               variant="outline"
               size="sm"
@@ -135,21 +141,60 @@ export const Navbar = () => {
               <span className="hidden sm:inline">{getThemeName()}</span>
             </Button>
           </div>
-        </div>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center justify-center space-x-4 pb-3 border-t border-border/50 pt-3">
-          <Link to="/" className="text-xs font-medium hover:text-primary transition-colors">
-            Home
-          </Link>
-          <Link to="/contact" className="text-xs font-medium hover:text-primary transition-colors">
-            Contact
-          </Link>
-          <Link to="/join" className="text-xs font-medium hover:text-primary transition-colors">
-            Join Us
-          </Link>
+          {/* Mobile hamburger */}
+          <div className="md:hidden flex items-center space-x-3">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={cycleTheme}
+              title="Switch Theme"
+              className="p-2"
+            >
+              <Palette className="w-4 h-4" />
+            </Button>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-md hover:bg-accent transition"
+            >
+              {mobileOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu Drawer */}
+      {mobileOpen && (
+        <div className="md:hidden bg-background border-t border-border/50 shadow-lg">
+          <div className="flex flex-col px-4 py-3 space-y-3">
+            <Link
+              to="/"
+              onClick={() => setMobileOpen(false)}
+              className="text-base font-medium hover:text-primary transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="text-base font-medium hover:text-primary transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/join"
+              onClick={() => setMobileOpen(false)}
+              className="text-base font-medium hover:text-primary transition-colors"
+            >
+              Join Us
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
