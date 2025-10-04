@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import JoinUs from "./pages/JoinUs";
 import NotFound from "./pages/NotFound";
+import { WhatsAppWidget } from "@/components/WhatsAppWidget";
 
 const queryClient = new QueryClient();
 
@@ -20,9 +21,13 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/join" element={<JoinUs />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+        {/* WhatsApp widget*/}
+        <WhatsAppWidget />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

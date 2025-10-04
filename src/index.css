@@ -98,6 +98,180 @@ All colors MUST be HSL.
     --gradient-end: 160 84% 39%;
     --gradient-accent: 215 20% 65%;
   }
+
+  /* Black & White Theme - Monochrome */
+  [data-theme="blackwhite"] {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 0%;
+    
+    --accent: 0 0% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 30%;
+    
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 0 0% 0%;
+    
+    --gradient-start: 0 0% 0%;
+    --gradient-end: 0 0% 100%;
+    --gradient-accent: 0 0% 60%;
+  }
+
+  /* Royal Blue & Yellow Theme */
+  [data-theme="royal"] {
+    --background: 48 96% 50%;
+    --foreground: 227 56% 20%;
+    
+    --card: 48 96% 50%;
+    --card-foreground: 227 56% 20%;
+    
+    --primary: 227 56% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 48 96% 56%;
+    --secondary-foreground: 227 56% 20%;
+    
+    --accent: 227 56% 40%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 227 20% 90%;
+    --muted-foreground: 227 30% 40%;
+    
+    --border: 227 20% 80%;
+    --input: 227 20% 80%;
+    --ring: 48 96% 56%;
+    
+    --gradient-start: 227 56% 35%; /* royal blue */
+    --gradient-end: 48 96% 56%;   /* yellow */
+    --gradient-accent: 227 56% 50%;
+  }
+
+  /* Yellow & Zinc Gradient Theme */
+  [data-theme="yellowzinc"] {
+    --background: 0 0% 98%;
+    --foreground: 240 5% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 5% 20%;
+    
+    --primary: 48 96% 56%;
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 240 5% 30%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 48 96% 56%;
+    --accent-foreground: 240 5% 30%;
+    
+    --muted: 240 5% 90%;
+    --muted-foreground: 240 5% 30%;
+    
+    --border: 240 5% 80%;
+    --input: 240 5% 80%;
+    --ring: 48 96% 56%;
+    
+    --gradient-start: 48 96% 56%;  /* yellow */
+    --gradient-end: 240 5% 30%;   /* zinc */
+    --gradient-accent: 240 5% 50%;
+  }
+
+  /* Imperial Theme - Crimson + Gold + Black */
+  [data-theme="imperial"] {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --primary: 0 85% 45%; /* Crimson */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 96% 56%; /* Gold */
+    --secondary-foreground: 0 0% 10%;
+
+    --accent: 0 85% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 43 96% 56%;
+
+    --gradient-start: 0 85% 45%;
+    --gradient-end: 43 96% 56%;
+    --gradient-accent: 0 0% 0%;
+  }
+
+  /* Aurora Theme - Teal + Magenta + Midnight */
+  [data-theme="aurora"] {
+    --background: 260 50% 10%;
+    --foreground: 0 0% 100%;
+
+    --card: 260 50% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --primary: 180 80% 45%; /* Teal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 320 70% 55%; /* Magenta */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 260 80% 60%; /* Purple accent */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 260 30% 25%;
+    --muted-foreground: 0 0% 80%;
+
+    --border: 260 30% 35%;
+    --input: 260 30% 35%;
+    --ring: 180 80% 45%;
+
+    --gradient-start: 180 80% 45%;
+    --gradient-end: 320 70% 55%;
+    --gradient-accent: 260 80% 60%;
+  }
+
+  /* Eclipse Theme - Black + Neon Purple + Fiery Orange */
+  [data-theme="eclipse"] {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --primary: 270 100% 60%; /* Neon Purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 100% 50%; /* Fiery Orange */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 300 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 270 100% 60%;
+
+    --gradient-start: 270 100% 60%;
+    --gradient-end: 20 100% 50%;
+    --gradient-accent: 300 100% 60%;
+  }
 }
 
 @layer base {
@@ -170,6 +344,36 @@ All colors MUST be HSL.
   [data-theme="sportsman"] .glass {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  [data-theme="blackwhite"] .glass {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  [data-theme="royal"] .glass {
+    background: rgba(30, 58, 138, 0.4);
+    border: 1px solid rgba(250, 204, 21, 0.4);
+  }
+
+  [data-theme="yellowzinc"] .glass {
+    background: rgba(250, 204, 21, 0.3);
+    border: 1px solid rgba(63, 63, 70, 0.3);
+  }
+
+  [data-theme="imperial"] .glass {
+    background: rgba(255, 215, 0, 0.15);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+  }
+
+  [data-theme="aurora"] .glass {
+    background: rgba(0, 255, 200, 0.15);
+    border: 1px solid rgba(255, 0, 200, 0.3);
+  }
+
+  [data-theme="eclipse"] .glass {
+    background: rgba(128, 0, 255, 0.2);
+    border: 1px solid rgba(255, 85, 0, 0.3);
   }
 
   /* Hover Effects */

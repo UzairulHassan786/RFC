@@ -16,15 +16,15 @@ const JoinUs = () => {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-white" />
-            <span className="text-sm font-semibold text-white">50% Off First Month</span>
+            <span className="text-sm font-semibold text-white">20% Off First Month</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Join Vigilant Fitness
+            Join RockFitnessClub
           </h1>
           <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
             Take the first step towards transforming your life. Fill out the form below and 
-            our team will contact you within 24 hours.
+            our team will contact you within 1 hours.
           </p>
         </div>
       </section>
@@ -34,11 +34,11 @@ const JoinUs = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-card rounded-xl border border-border">
-              <div className="text-3xl font-bold gradient-text mb-2">10K+</div>
+              <div className="text-3xl font-bold gradient-text mb-2">20</div>
               <div className="text-sm text-muted-foreground">Active Members</div>
             </div>
             <div className="text-center p-6 bg-card rounded-xl border border-border">
-              <div className="text-3xl font-bold gradient-text mb-2">50+</div>
+              <div className="text-3xl font-bold gradient-text mb-2">5+</div>
               <div className="text-sm text-muted-foreground">Expert Trainers</div>
             </div>
             <div className="text-center p-6 bg-card rounded-xl border border-border">

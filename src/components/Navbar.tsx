@@ -2,28 +2,78 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dumbbell } from "lucide-react"; // add this import
+
+
+type Theme =
+  | "default"
+  | "female"
+  | "sportsman"
+  | "blackwhite"
+  | "royal"
+  | "yellowzinc"
+  | "imperial"
+  | "aurora"
+  | "eclipse";
 
 export const Navbar = () => {
-  const [theme, setTheme] = useState<"default" | "female" | "sportsman">("sportsman"); // ✅ default is now "sportsman"
+  // Imperial is now the starting theme
+  const [theme, setTheme] = useState<Theme>("imperial");
 
   useEffect(() => {
-    // apply theme when component mounts
-    document.documentElement.setAttribute("data-theme", theme === "default" ? "" : theme);
+    if (theme === "default") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
   }, [theme]);
 
   const cycleTheme = () => {
-    const themes: Array<"default" | "female" | "sportsman"> = ["sportsman", "default", "female"];
+    const themes: Array<Theme> = [
+      "imperial",   // start with imperial
+      "sportsman",
+      "default",
+      "female",
+      "blackwhite",
+      "royal",
+      "yellowzinc",
+      "aurora",
+      "eclipse",
+    ];
+
     const currentIndex = themes.indexOf(theme);
     const nextTheme = themes[(currentIndex + 1) % themes.length];
     setTheme(nextTheme);
-    document.documentElement.setAttribute("data-theme", nextTheme === "default" ? "" : nextTheme);
+
+    if (nextTheme === "default") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", nextTheme);
+    }
   };
 
   const getThemeName = () => {
     switch (theme) {
-      case "sportsman": return "Power";
-      case "default": return "Vigilant";
-      case "female": return "Elegant";
+      case "imperial":
+        return "Imperial";
+      case "sportsman":
+        return "Power";
+      case "default":
+        return "Vigilant";
+      case "female":
+        return "Elegant";
+      case "blackwhite":
+        return "Monochrome";
+      case "royal":
+        return "Royal Blue & Yellow";
+      case "yellowzinc":
+        return "Sunset Zinc";
+      case "aurora":
+        return "Aurora";
+      case "eclipse":
+        return "Eclipse";
+      default:
+        return "Imperial";
     }
   };
 
@@ -31,18 +81,17 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 sm:w-10 sm:h-10 gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg sm:text-xl">R</span>
-            </div>
+  <Dumbbell className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
+</div>
             <span className="font-bold text-lg sm:text-xl gradient-text hidden sm:inline">
               RockFitnessClub
             </span>
           </Link>
 
-          {/* Center - Contact Info */}
+          {/* Center */}
           <div className="flex-1 flex items-center justify-center mx-4 sm:mx-8 gap-2 sm:gap-3">
             <a
               href="tel:+923419487674"
@@ -61,7 +110,7 @@ export const Navbar = () => {
             </a>
           </div>
 
-          {/* Right - Navigation Links & Theme Switcher */}
+          {/* Right */}
           <div className="flex items-center space-x-2 sm:space-x-6">
             <div className="hidden md:flex items-center space-x-6">
               <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
