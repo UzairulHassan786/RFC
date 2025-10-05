@@ -23,13 +23,13 @@ const services = [
   },
   {
     icon: Heart,
-    title: "Meditation",
-    description: "Cultivate mental clarity, reduce stress, and improve focus through guided meditation sessions and mindfulness training.",
+    title: "HIIT",
+    description: "High-Intensity Interval Training (HIIT) is a powerful workout method combining short bursts of intense exercise with brief recovery periods. It boosts metabolism, burns fat, and improves endurance in less time. HIIT challenges your limits, enhances cardiovascular health, and gives maximum results efficiently perfect for anyone seeking fast, effective fitness progress.",
   },
   {
     icon: User,
-    title: "Personal Training",
-    description: "One-on-one customized sessions designed specifically for your goals, fitness level, and lifestyle preferences.",
+    title: "CrossFit",
+    description: "CrossFit is a high-energy fitness program blending weightlifting, cardio, and functional movements. Designed to build strength, endurance, and agility, it challenges the body through constantly varied workouts. CrossFit pushes limits, improves overall athleticism, and fosters a strong community making it ideal for those seeking full-body fitness with real results.",
   },
 ];
 
