@@ -58,7 +58,7 @@ export const Services = () => {
             return (
               <div
                 key={index}
-                className="flip-card h-80 sm:h-72 rounded-2xl"
+                className="flip-card h-80 sm:h-80 rounded-2xl"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flip-card-inner">
